@@ -1,9 +1,9 @@
-<div class="widget">
+<div class="widget bs-sidebar">
     {% for widget in widgets %}
     {% if widget.content == 'recently_post'%}
     <h3 class="under_line">{{ widget.title }}</h3>
-    <div class="textwidget">
-        <ul>
+     <div class="textwidget">
+        <ul class="links">  
         {% with r_posts=recently_posts %}
         {% if r_posts %}
         {% for post in r_posts %}
@@ -14,11 +14,11 @@
         {% endif %}
         {% endwith %}
         </ul>
-    </div>
+     </div>
     {% else %}{% if widget.content == 'hot_post' %}
     <h3 class="under_line">{{ widget.title }}</h3>
     <div class="textwidget">
-        <ul>
+        <ul class="links"> 
         {% with h_posts=hot_posts %}
         {% if h_posts %}
         {% for post in h_posts %}

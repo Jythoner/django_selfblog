@@ -1,18 +1,8 @@
 body {
     font-family: 'Helvetica Neue', Arial, "Hiragino Sans GB", sans-serif;
 }
-a:hover{
-text-decoration:none;
-color:#00bfff;
-}
 .container {
     max-width: 980px;
-}
-.container h1 a:hover{
-color:red;
-}
-.container h1, .container h5{
-    margin-left: 90px;
 }
 .navbar-fixed-top, .navbar-fixed-bottom {
     position: absolute;
@@ -68,7 +58,7 @@ p {
     -webkit-padding-start: 0;
 }
 .sidebar ul.links li {
-    margin-left:-40px;
+     margin-left:-20px;
     list-style: none;
     padding-bottom: 5px;
     width:100%; white-space:nowrap; word-break:keep-all; overflow:hidden; text-overflow:ellipsis;
@@ -84,36 +74,5 @@ p {
 /*code*/
 .docutils {
     color: #028DFA;
-}
-.mylogo{
-background: url("/static/icon2.jpg") no-repeat;
-margin-left:100px;
-} 
-
-.detail{
-margin-left:-70px;
-}
-
-.mm{
-font-size:17px;
-}
-
-h3.under_line a:hover{
-color: #00bfff;
-}
-
-.nn{
-float:right;
-margin-right:120px;
-margin-top:-40px;
-}
-
-.nn a{
-margin-right:10px;
-}
-
-.nn a img{
-width:30px;
-height:30px;
 }
 

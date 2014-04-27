@@ -1,36 +1,32 @@
 #coding:utf-8
 # Django settings for selfblog project.
 from os import path
-from platform import platform
-if 'centos' in platform():
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ROOT_PATH = path.abspath(path.join(path.dirname('settings.py'), path.pardir))
 
 ADMINS = (
-    ('the5fire', 'thefivefire@gmail.com'),
+    ('thetwenty', 'thetwenty@163.com'),
 )
-ALLOWED_HOSTS = ['localhost', '.the5fire.com']
+ALLOWED_HOSTS = ['localhost', '.virtualenv.net']
 
 MANAGERS = ADMINS
 
 if DEBUG:
     DOMAIN = 'http://localhost:8000'
-    DB_NAME = 'selfblog.sqlite3'
-    DB_USER = 'root'
-    DB_PWD = 'root'
-else:
-    DOMAIN = 'http://www.the5fire.com'
     DB_NAME = 'mydb'
-    DB_USER = 'the5fire'
-    DB_PWD = 'the5fire'
+    DB_USER = 'root'
+    DB_PWD = 'huyiyang'
+else:
+    DOMAIN = 'http://www.virtualenv.net'
+    DB_NAME = 'mydb'
+    DB_USER = 'thetwenty'
+    DB_PWD = 'huyiyang'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': DB_NAME,                      # Or path to database file if using sqlite3.
         'USER': DB_USER,                      # Not used with sqlite3.
         'PASSWORD': DB_PWD,                  # Not used with sqlite3.
@@ -151,7 +147,7 @@ if DEBUG:
     MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware', )
     LOG_FILE = '/tmp/blog.log'
 else:
-    LOG_FILE = '/home/the5fire/virtualenvs/bloga/logs/all.log'
+    LOG_FILE = '/home/thetwenty/virtualenvs/bloga/logs/all.log'
 
 LOGGING = {
     'version': 1,
@@ -243,5 +239,5 @@ ONE_DAY = 24*60*60
 FIF_MIN = 15 * 60
 FIVE_MIN = 5 * 60
 
-DUOSHUO_SECRET = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
-DUOSHUO_SHORT_NAME = 'xxxxxxxx'
+DUOSHUO_SECRET = '7b49d27c2a8b5dcae2fe9a56fcbbf940'
+DUOSHUO_SHORT_NAME = 'virtualenv'
