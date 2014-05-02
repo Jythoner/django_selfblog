@@ -74,9 +74,16 @@ p {
     width:100%; white-space:nowrap; word-break:keep-all; overflow:hidden; text-overflow:ellipsis;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sidebar ul.links li {
+    padding-left: 40px;
+}
+}
+
 .sidebar ul.ds-recent-comments {
     margin-left: -40px;
 }
+
 .under_line {
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 5px;
