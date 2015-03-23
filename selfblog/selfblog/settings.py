@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 
 if DEBUG:
     DOMAIN = 'http://localhost:8000'
-    DB_NAME = 'mydb'
+    DB_NAME = 'yang'
     DB_USER = 'root'
     DB_PWD = 'huyiyang'
 else:
@@ -30,8 +30,8 @@ DATABASES = {
         'NAME': DB_NAME,                      # Or path to database file if using sqlite3.
         'USER': DB_USER,                      # Not used with sqlite3.
         'PASSWORD': DB_PWD,                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'HOST': '127.0.0.1',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 

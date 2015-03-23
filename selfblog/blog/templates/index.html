@@ -9,7 +9,7 @@
     {% with post_list=posts.object_list %}
     {% if post_list %}
     {% for post in post_list %}
-        <div class="caption" style="margin-left:-70px;">
+        <div class="caption" style="margin-left:10px;">
             <h3 class='under_line'>
                 <a href="{{ post.get_absolute_url }}" rel="bookmark" title="详细阅读 {{ post.title }}" >{% autoescape off %}{{ post.title }}{% endautoescape %}</a>
               <span class="badge" style=" background:#01dfd7;">{{post.view_times}}°C</span>

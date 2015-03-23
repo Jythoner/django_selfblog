@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% block title %}{% endblock %} Vampire Diaries</title>
+        <title>{% block title %}{% endblock %} 河图洛书</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{% block desc %}关于编程python心得、工作经验–人生苦短，我用python{% endblock %}">
         <meta name="keywords" content="{% block keywords %}python,linux,vim,web开发{% endblock %}">
@@ -10,7 +10,7 @@
         <meta name="baidu-site-verification" content="L1tGNksWV2rt8zho" />
         <meta name="google-site-verification" content="DBmuxv3lJezFBdzrzoueLXVbY6gJ6cdbR1mroGVRiNQ" />
         <link rel="pingback" href="/xmlrpc/" />
-        <link rel="shortcut icon" href="/static/icon2.jpg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/static/gongjin.png" type="image/x-icon" />
 
         <link href="/static/bootstrap/css/bootstrap3.0.min.css" rel="stylesheet">
         <link href="/static/bootstrap/css/docs.css" rel="stylesheet">
@@ -18,8 +18,8 @@
         {%  block extend_style %}{% endblock %}
     </head>
     <body style="position: static;" data-twttr-rendered="true"> 
-        <div class="navbar navbar-inverse navbar-fixed-top"> 
-                <div class="container">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -27,8 +27,8 @@
                     </button>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="mm">
-                                <a href="/">首页</a>
+                            <li class="mm" >
+                                <a href="/" >河图洛书</a>
                             </li>
                                 {% for page in pages %}
                             <li class="mm">
@@ -40,7 +40,7 @@
                             </li>
                                 {% endfor %}
                             </ul>
-                            <form class="navbar-form pull-right" method="get" action="/">
+                            <form class="navbar-form pull-right" method="get" action="/" style="margin-right: 20px">
                              <input class="form-control" name="s" id="s" style="width: 200px;" type="text">
                              <button type="submit" class="btn btn-default" style="color:#00bfff; font-weight:bold;">Search</button>                               </form>
                     </div>
@@ -55,10 +55,9 @@
         </div>
         <div class="bs-header">
             <div class="container mylogo">
-                <h1><a href="/">Vampire</a></h1>
-                <h5 style="color:black;">人 生 苦 短, 我 用 <strong>Python</strong>.</h5>
-
-                    <ul class="nav nav-tabs" style="margin-left:40px;">
+                <a href="/" style="margin-left: 100px;"></a>
+                <h4 style="margin-left:120px; color: #762E2E">关注 Python Docker Linux Django</h4>
+                    <ul class="nav nav-tabs" style="margin-left:80px; font-weight:bold">
                         {% for category in categories %}
                         {% if category.is_nav %}
                         <li class="dropdown"><a href="/category/{{ category.alias }}/">{{ category.name }}</a></li>

@@ -4,10 +4,10 @@
 {% block desc %}{{ page.content|truncatewords:140 }}{%  endblock %}
 {% block keywords %}{% for tag in page.tags_list %}{{ tag }},{% endfor %}{% endblock %}
 {% block main %}
-<div class="detail">
-    <h2>
+<div class="detail" style="margin-left: 30px">
+    <h3>
         <span>{{ page.title }}</span>
-    </h2>
+    </h3>
 
     <div class="info">
         作者：{{ page.author }} 

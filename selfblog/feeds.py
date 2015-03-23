@@ -24,9 +24,9 @@ class LatestEntriesFeed(Feed):
     feed_type = ExtendedRSSFeed
 
     # Elements for the top-level, channel.
-    title = u"Vampire Diaries"
+    title = u"河图洛书"
     link = "http://www.virtualenv.net"
-    author = 'Vampire'
+    author = '河图洛书'
     description = u"life is short, we need python."
 
     def items(self):
