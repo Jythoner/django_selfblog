@@ -12,7 +12,7 @@ from django.core.cache import get_cache
 logger = logging.getLogger(__name__)
 
 try:
-    cache = get_cache('memcache')
+    cache = get_cache('redis')
 except ImportError as e:
     logger.warn(u'加载memcache时出错:[%s], 改为内存缓存', e)
     cache = get_cache('default')

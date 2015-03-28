@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 
 if DEBUG:
     DOMAIN = 'http://localhost:8000'
-    DB_NAME = 'yang'
+    DB_NAME = 'code'
     DB_USER = 'root'
     DB_PWD = 'huyiyang'
 else:
@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'pingback',
     'duoshuo',
     'blog',
+    'gunicorn'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -219,11 +220,23 @@ CACHES = {
     },
     'memcache': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': 'unix:/home/the5fire/memcached.sock',
+        'LOCATION': '127.0.0.1:11211',
         'options': {
             'MAX_ENTRIES': 1024,
         }
     },
+    "redis": {
+        "BACKEND": "redis_cache.cache.RedisCache",
+        "LOCATION": "127.0.0.1:6379",
+        "OPTIONS": {
+            'db': 1,
+            'PASSWORD': 'huyiyang',
+            "PICKLE_VERSION": -1,   # default
+            "PARSER_CLASS": "redis.connection.HiredisParser",
+            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
+
+            }
+        },
 }
 
 

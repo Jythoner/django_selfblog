@@ -14,7 +14,6 @@ text-decoration:none;
 
 .container p{
     color: #762E2E;
-    font-weight: bold;
 }
 
 
@@ -131,4 +130,48 @@ position: relative;
 .under_line {
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 5px;
+}
+
+pre {
+    font-family: monospace, serif ;
+    background-color:#003e3e;
+    border-radius: 10px;
+    color: #C6A300 !important;
+    font-size: 14px;
+}
+
+.name {
+    color:#ffffff;
+}
+
+.name.namespace {
+    color:#ffffff;
+}
+
+.operator {
+    color: #c7254e;
+}
+
+.name.class {
+    color: #c7254e;
+}
+
+.punctuation {
+    color:#ffffff;
+}
+
+.name.function {
+    color: #82D900;
+}
+
+.operator.word {
+    color: #4DFFFF !important;
+}
+
+.literal.string.doc {
+    color:#5B5B5B !important;
+}
+
+.literal.number.integer {
+    color:#563d7c !important;
 }
